@@ -1,0 +1,16 @@
+{
+  "name": "ethers-examples",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.4.1",
+    "bun-types": "latest",
+    "prettier": "^3.0.2"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "ethers": "^6.7.1"
+  }
+}
