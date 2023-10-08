@@ -1,16 +1,11 @@
 import { ethers } from "ethers";
+import { provider } from "../utils";
 
-const INFURA_ID = process.env.INFURA_ID || "";
-
-const address = "0xc2d53671243C9a1C0b70516FD0e6366702C477ED";
-
-async function main() {
+/** Retrieves the balance of an ETH wallet. */
+async function getAccountBalance(address: string) {
   try {
-    const provider = new ethers.JsonRpcProvider(
-      `https://mainnet.infura.io/v3/${INFURA_ID}`
-    );
-
     const balance = await provider.getBalance(address);
+
     console.log(
       `\nETH Balance of ${address} --> ${ethers.formatEther(balance)} ETH\n`
     );
@@ -19,4 +14,6 @@ async function main() {
   }
 }
 
-main();
+const address = "0xc2d53671243C9a1C0b70516FD0e6366702C477ED";
+
+getAccountBalance(address);
