@@ -1,7 +1,10 @@
 import { ethers } from "ethers";
 import { provider } from "../utils";
 
-/** Retrieves the balance of an ETH wallet. */
+/**
+ * Retrieves and displays the Ethereum (ETH) balance of a given wallet address.
+ * @param {string} address - The Ethereum wallet address to retrieve the balance for.
+ */
 async function getAccountBalance(address: string) {
   try {
     const balance = await provider.getBalance(address);
